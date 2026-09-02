@@ -10,4 +10,10 @@
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.6.2" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="01-CommonDesignTechniques\SimpleFactory\" />
+    <Folder Include="02-DesignPatterns\" />
+    <Folder Include="03-Shared\Enums\" />
+  </ItemGroup>
+
 </Project>
