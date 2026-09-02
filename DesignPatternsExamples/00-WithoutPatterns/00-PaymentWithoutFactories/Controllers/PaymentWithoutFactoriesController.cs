@@ -7,20 +7,29 @@ namespace DesignPatternsExamples._00_WithoutPatterns._00_PaymentWithoutFactories
 {
     public class PaymentWithoutFactoriesController : Controller
     {
-        // GET: PaymentWithoutFactoriesController
+        /*
+         * Problem:
+         * - OrderService creates concrete payment objects.
+         * - Creation logic is mixed with business logic.
+         * - Adding a new payment type requires modifying OrderService.
+         * - This creates tight coupling.
+         *
+         * Solution:
+         * Use Simple Factory to separate object creation from business logic.
+         */
         [Route("/PaymentWithoutFactories")]
         [HttpGet]
         public string PaymentWithoutFactories()
         {
-            var OrderService = new OrderService();
+            var orderService = new OrderService();
 
             StringBuilder result = new StringBuilder();
 
-            result.AppendLine("Paument methods :");
+            result.AppendLine("Payment methods :");
 
-            result.AppendLine(OrderService.Process("cash"));
+            result.AppendLine(orderService.Process("cash"));
 
-            result.AppendLine(OrderService.Process("card"));
+            result.AppendLine(orderService.Process("card"));
 
             return result.ToString();
         }
