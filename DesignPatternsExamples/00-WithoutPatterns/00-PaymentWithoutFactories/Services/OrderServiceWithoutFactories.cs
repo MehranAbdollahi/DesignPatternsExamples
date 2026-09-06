@@ -1,6 +1,8 @@
-﻿namespace DesignPatternsExamples._00_WithoutPatterns._00_PaymentWithoutFactories.Services
+﻿using DesignPatternsExamples._03_Shared.Payments;
+
+namespace DesignPatternsExamples._00_WithoutPatterns._00_PaymentWithoutFactories.Services
 {
-    public class OrderService
+    public class OrderServiceWithoutFactories
     {
         public string Process(string paymentType)
         {

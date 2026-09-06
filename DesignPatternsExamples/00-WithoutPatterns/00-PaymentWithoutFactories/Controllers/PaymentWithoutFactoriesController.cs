@@ -21,7 +21,7 @@ namespace DesignPatternsExamples._00_WithoutPatterns._00_PaymentWithoutFactories
         [HttpGet]
         public string PaymentWithoutFactories()
         {
-            var orderService = new OrderService();
+            var orderService = new OrderServiceWithoutFactories();
 
             StringBuilder result = new StringBuilder();
 
